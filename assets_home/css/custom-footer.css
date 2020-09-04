@@ -1,0 +1,222 @@
+@font-face{
+    src: url('../font/font1.ttf');
+    font-family: nos;
+}
+
+.ft h4 {
+    font-family: nos;
+}
+
+.ft a, p, span {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ft {
+    display: flex;
+}
+
+.ft-info {
+    width: 65%;
+    height: 380px;
+    background-image: url('../img/footer.png'),linear-gradient(88deg, #8a0505 0%,  #ba0a15 100%);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 80px;
+    color: white;
+}
+
+.ft-info a {
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.ft-info a:hover {
+    text-decoration: none;
+    color: rgb(255, 177, 177);
+}
+
+.ft-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.ft-nav-list {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ft-nav-list h4 {
+    font-size: 26px;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.ft-nav-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.items {
+    width: 50%;
+    margin: 5px 0;
+}
+
+.items-translate{
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 15px;
+}
+
+.ft-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.ft-footer img {
+    max-width: 70px;
+}
+
+.ft-message {
+    width: 35%;
+    height: 380px;
+    background-color: #520606;
+    background-image: url('../img/footer2.png'),linear-gradient(88deg, #8a0505 0%,  #ba0a15 100%);
+    background-size: cover;
+    padding: 70px 70px;
+}
+
+.ft-box {
+    width: 100%;
+    height: 100%;
+    background-color: #8a0505;
+    border: 1px solid rgba(255, 255, 255, 0.468);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 45px;
+    color: white;
+}
+
+.ft-box h4 {
+    font-size: 26px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+
+.ft-box a {
+    width: 150px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.468);
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 350ms ease-in-out;
+}
+
+.ft-box a:hover{
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #8a0505;
+}
+
+.sosmed a {
+    font-size: 15px;
+    padding: 0 5px;
+}
+
+@media (max-width:1199px) {
+    .ft-message {
+        padding: 50px 50px;
+    }
+    .ft-box {
+        padding: 0 50px;
+    }
+    .ft-info {
+        padding-left: 68px;
+        padding-right: 68px;
+    }
+    .ft-nav-list {
+        width: 42%;
+    }
+    .ft-box p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:992px) {
+    .ft {
+        display: flex;
+        flex-direction: column;
+    }
+    .ft-info {
+        width: 100%;
+        height: 624px;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 40px;
+    }
+    .ft-nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    .ft-nav-list {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    .ft-footer {
+        height: 25%;
+        flex-direction: column;
+    }
+    .ft-message {
+        width: 100%;
+        height: 260px;
+        background-color: #520606;
+        padding: 32px 52px;
+    }
+}
+
+@media (max-width:576px) {
+    .ft-info {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 90px;
+        background-image: url('../img/footer2.png'),linear-gradient(88deg, #8a0505 0%,  #ba0a15 100%);
+        background-size: cover;
+        background-position: center;
+    }
+    .ft-message {
+        padding: 0;
+        height: 220px;
+    }
+    .ft-box {
+        border: unset;
+        padding-left: 20px;
+    }
+}

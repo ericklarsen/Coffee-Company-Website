@@ -1,0 +1,132 @@
+@font-face {
+    src: url('../font/font1.ttf');
+    font-family: nos;
+}
+
+.kicker h2 {
+    font-family: nos;
+    font-size: 35px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.kicker p {
+    font-family: 'Montserrat', sans-serif;
+    width: 70%;
+    font-size: 15px;
+    color: white;
+}
+
+.kicker a {
+    width: 150px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.468);
+    padding: 14px 14px 10.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    transition: all 350ms ease-in-out;
+}
+
+.kicker a:hover {
+    background-color: #ffffff;
+    text-decoration: none;
+    color: #8a0505;
+}
+
+.kicker {
+    display: flex;
+    position: relative;
+}
+
+.kicker-image {
+    width: 100%;
+    height: 415px;
+    background: #000;
+    position: relative;
+}
+
+.kicker-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kicker-image::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+.kicker-letter {
+    padding: 60px 60px;
+    width: 500px;
+    height: 240px;
+    background: rgb(100, 25, 25);
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.kicker-letter p{
+    width: 100%;
+    font-size: 14px;
+}
+
+.kicker-letter:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 50%;
+    height: 100%;
+    transform: skewY(10deg);
+    background-color: rgb(100, 25, 25);
+    z-index: -1;
+}
+
+.kicker-letter:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 80px;
+    width: 50%;
+    height: 100%;
+    transform: skewY(-10deg);
+    background-color: rgb(100, 25, 25);
+    z-index: -1;
+}
+
+@media (max-width:767px) {
+    .kicker-image {
+        display: none;
+    }
+    .kicker-letter {
+        width: 100%;
+        height: 170px;
+        position: relative;
+        left: 0;
+        padding: 35px 40px;
+    }
+
+    .kicker h2 {
+        font-size: 25px;
+    }
+    
+    .kicker p {
+        font-size: 14px;
+        width: 100%;
+    }
+}

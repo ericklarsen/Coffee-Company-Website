@@ -1,0 +1,221 @@
+@font-face {
+    src: url('../font/font1.ttf');
+    font-family: nos;
+}
+
+.testimoni {
+    margin-top: 100px;
+}
+
+#slideer {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0%, 100% 88%, 50% 100%, 0 88%);
+}
+
+#slideer input[type=radio] {
+    display: none;
+}
+
+#slideer label {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#slidees {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slidee1:checked~#slidees .inner {
+    margin-left: 0;
+}
+
+#slidee2:checked~#slidees .inner {
+    margin-left: -100%;
+}
+
+#slidee3:checked~#slidees .inner {
+    margin-left: -200%;
+}
+
+#slidee4:checked~#slidees .inner {
+    margin-left: -300%;
+}
+
+#slidees .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+}
+
+#slidees .slidee {
+    width: 25%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: black;
+    clip-path: polygon(0 0, 100% 0%, 100% 88%, 50% 100%, 0 88%);
+}
+
+#controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+}
+
+#controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+}
+
+#controls label:hover {
+    opacity: 1;
+}
+
+#slidee1:checked~#controls label:nth-child(2), #slidee2:checked~#controls label:nth-child(3), #slidee3:checked~#controls label:nth-child(4), #slidee4:checked~#controls label:nth-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float: right;
+    margin: 0 -50px 0 0;
+    display: block;
+}
+
+#slidee1:checked~#controls label:nth-last-child(2), #slidee2:checked~#controls label:nth-last-child(3), #slidee3:checked~#controls label:nth-last-child(4), #slidee4:checked~#controls label:nth-last-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float: left;
+    margin: 0 0 0 -50px;
+    display: block;
+}
+
+#bullets2 {
+    width: 100%;
+    bottom: 0;
+    z-index: 50;
+    text-align: center;
+}
+
+#bullets2 label {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background: rgb(177, 177, 177);
+    margin: 0 10px;
+}
+
+#slidee1:checked~#bullets2 label:nth-child(1), #slidee2:checked~#bullets2 label:nth-child(2), #slidee3:checked~#bullets2 label:nth-child(3), #slidee4:checked~#bullets2 label:nth-child(4) {
+    background: rgb(70, 70, 70);
+}
+
+.slidee-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slidee-content img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.slidee-text {
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+    flex-direction: column;
+    color: black;
+}
+
+.slidee-testi {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: normal;
+    color: black;
+}
+
+.slidee-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.slidee-name span {
+    font-weight: bold;
+}
+
+.slidee-text a {
+    margin-top: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    transition: all 200ms ease-in-out;
+}
+
+.slidee-text i {
+    transition: all 200ms ease-in-out;
+}
+
+.slidee-text a:hover {
+    text-decoration: none;
+    color: rgb(197, 197, 197);
+}
+
+.slidee-text a:hover i {
+    transform: translateX(3px);
+}
+
+@media screen and (max-width: 900px) {
+    #slidee1:checked~#controls label:nth-child(2), #slidee2:checked~#controls label:nth-child(3), #slidee3:checked~#controls label:nth-child(4), #slidee4:checked~#controls label:nth-child(1), #slidee1:checked~#controls label:nth-last-child(2), #slidee2:checked~#controls label:nth-last-child(3), #slidee3:checked~#controls label:nth-last-child(4), #slidee4:checked~#controls label:nth-last-child(1) {
+        margin: 0;
+    }
+    .slidee-text {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .testimoni {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 567px) {
+    #bullets2 {
+        margin-bottom: 60px;
+    }
+    .slidee-text h2 {
+        font-size: 50px;
+    }
+    .slidee-text p {
+        font-size: 14px;
+    }
+}

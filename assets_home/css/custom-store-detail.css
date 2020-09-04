@@ -1,0 +1,516 @@
+@font-face {
+    src: url('../font/font1.ttf');
+    font-family: nos;
+}
+
+.shop {
+    margin-bottom: 100px;
+}
+
+.detail {
+    margin-top: 170px;
+    margin-bottom: 50px;
+}
+
+.detail h1, h3 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+}
+
+.detail span, a,small, p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.detail-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.detail-image {
+    width: 45%;
+    display: flex;
+}
+
+
+.detail-info {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-info span {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.detail-info h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: #8f2e2e;
+}
+
+.detail-info-price {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.detail-info-price span {
+    font-size: 25px;
+    letter-spacing: 0px;
+}
+
+.detail-info-price .price-disc {
+    margin-right: 20px;
+    text-decoration: line-through;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.detail-info-form {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.form-short {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-short p{
+    color: rgb(113, 113, 113);
+    font-size: 11px;
+    text-align: justify;
+}
+
+.form-short .artikel{
+    color: rgba(0, 0, 0, 0.639);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding: 3px 0;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.448);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.form-short .artikel:hover{
+    text-decoration: none;
+}
+
+.form-short .artikel i{
+    transition: all 200ms ease-in-out;
+}
+
+.form-short .artikel:hover i{
+    transform: translateX(3px);
+}
+
+.form-x-short {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.form-long {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.form-input {
+    border: none;
+    border-bottom: 1px solid black;
+    height: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.form-input:focus {
+    background: transparent;
+    outline: none;
+}
+
+.form-button,
+.form-button2 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.form-button-small {
+    width: 100%;
+    display: none;
+    justify-content: flex-end;
+}
+
+
+.form-button-small2 {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-button button,
+.form-button2 button,
+.form-button-small button,
+.form-button-small2 button {
+    border: none;
+    padding: 10px 30px;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    background: #8a0505;
+    color: white;
+    transition: all 350ms ease-in-out;
+    cursor: pointer;
+}
+
+.form-button button:focus {
+    outline: none;
+}
+
+.form-button button:hover {
+    background: #8f0a0a;
+}
+
+.check-btn {
+    position: absolute;
+    width: 116px;
+    height: 41px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.check-btn2 {
+    position: absolute;
+    width: 116px;
+    height: 41px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+
+.detail-desc {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.detail-desc h3 {
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #8f2e2e;
+}
+
+.detail-desc p {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: black;
+}
+
+.detail-image-title, .detail-image-price {
+    display: none;
+}
+
+/* ------------------------ Form Info Client */
+
+.form-info-client {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    transition: all 600ms ease-in-out;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.form-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 11px 40px;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+.form-content h4 {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.form-content p {
+    font-size: 12px;
+    color: black;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-header img {
+    width: 120px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin: auto;
+}
+
+.form-data {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.form-data-small {
+    margin-top: 20px;
+    display: none;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.form-data-small h5{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.form-data-small span{
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
+/* untuk body biar gk bisa scroll */
+
+.overflow-on {
+    overflow: hidden;
+}
+
+.form-button .form-info-client.show-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.form-button2 .form-info-client.show-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.form-ekspedisi {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: -10px;
+}
+
+.ekspedisi {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.393);
+    padding: 15px;
+    margin: 0 10px;
+    margin-bottom: 10px;
+}
+
+.ekspedisi span, h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ekspedisi-title1 {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.ekspedisi span {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    margin-bottom: 3px;
+}
+
+#modal-small{
+    display: none;
+}
+
+.show{
+    display: flex;
+}
+
+.none{
+    display: none;
+}
+
+.form-loading,.form-loading2,.form-loading3{
+    display: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-loading.show,.form-loading2.show,.form-loading3.show{
+    display: flex;
+}
+
+#opsiPesanan-form2{
+    display: none;
+}
+
+/* ----------------- End of Form Info Client */
+
+@media (max-width:1050px) {
+    .detail {
+        margin-top: 150px;
+    }
+}
+
+@media (max-width:992px) {
+    .form-content {
+        width: 80%;
+    }
+    .form-data label {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:767px) {
+    .detail {
+        margin-top: 120px;
+    }
+    .container {
+        max-width: 700px;
+    }
+    .form-data label {
+        font-size: 10px;
+    }
+    .detail-wrap {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .detail-image {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    .detail-image-title {
+        display: flex;
+        flex-direction: column;
+    }
+    .detail-image-title span {
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 2px;
+    }
+    .detail-image-title h1 {
+        font-size: 30px;
+        margin: 10px 0;
+        letter-spacing: 2px;
+    }
+    .detail-info {
+        margin-top: 20px;
+        width: 100%;
+    }
+    .detail-info-content {
+        display: none;
+    }
+    .detail-desc {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:567px) {
+    #opsiPesanan-form2{
+        display: flex;
+    }
+    .detail-wrap {
+        align-items: flex-start;
+    }
+    .form-content {
+        width: 95%;
+    }
+    .form-header img {
+        width: 100px;
+    }
+    .form-data {
+        margin-top: 10px;
+    }
+    .form-button{
+        display: none;
+        content: none;
+    }
+    .form-button-small {
+        display: flex;
+    }
+
+    .form-button-small.none {
+        display: none;
+    }
+
+    .form-ekspedisi {
+        flex-direction: column;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+
+    .ekspedisi {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(0, 0, 0, 0.393);
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

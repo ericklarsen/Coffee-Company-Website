@@ -1,0 +1,125 @@
+@font-face{
+    src: url('../font/font1.ttf');
+    font-family: nos;
+}
+
+.contact{
+    padding-top: 100px;
+    margin-bottom: 60px;
+}
+.contact h1, h3, h4, h5 {
+    font-family: 'Merriweather', serif;
+}
+
+.contact span, small, a,label {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page-header {
+    margin-top: 55px;
+    margin-bottom: 60px;
+    max-width: 100%;
+}
+
+.page-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.page-header h1 {
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 100%;
+    letter-spacing: 2px;
+    color: #8a0505;
+}
+
+.page-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-bar{
+    width: 67%;
+}
+
+label{
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-form{
+    margin-top: 20px;
+    width: 100px;
+    height: 45px;
+    border: none;
+    background-color: #8a0505;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    transition: all 350ms ease-in-out;
+    cursor: pointer;
+}
+
+.btn-form:hover{
+    background-color: #701212;
+}
+
+.side-bar{
+    max-width: 28%;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-bar-section{
+    margin-bottom: 20px;
+}
+
+.side-bar h4{
+    font-size: 27px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #8a0505;
+}
+
+.side-bar p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+    max-width: 100%;
+}
+
+@media (max-width:776px) {
+    .page-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .form-bar{
+        width: 100%;
+    }
+    .side-bar{
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+    .page-header p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+    .page-header h1 {
+        font-size: 44px;
+    }
+    .side-bar h4{
+        font-size: 21px;
+    }
+}
